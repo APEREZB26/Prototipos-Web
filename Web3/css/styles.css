@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root{
+    --primary: rgb(26,38,89);
+    --primary-light: rgb(31, 45, 109);
+    --orange: #ffa339;
+    --light-blue: #5EA4FF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin sans', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    background: transparent;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: #3f33ff;
+}
+
+body{
+    background-color: var(--primary-light);
+}
+
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 90px;
+    color: aliceblue;
+    padding: 0px 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+    z-index: 10000;
+}
+
+header .logo{
+    position: absolute;
+    top: 15px;
+    left: 30px;
+}
+
+header nav{
+    display: flex;
+    list-style: none;
+}
+
+header nav li{
+    font-size: 18px;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+header nav li:hover{
+    border-bottom: 2px solid aliceblue;
+}
+
+header button{
+    border: 1px solid white;
+    background: none;
+    color: aliceblue;
+    margin-left: 5px;
+    padding: 5px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+header button:hover{
+    background: aliceblue;
+    color: var(--primary);
+}
+
+#cover{
+    display: grid;
+    grid-template-columns: repeat(2,40%);
+    grid-gap: 10%;
+    width: 80vw;
+    margin: auto;
+    align-items: center;
+    height: 90vh;
+}
+
+#cover img{
+    width: 100%;
+    -moz-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+}
+
+#cover div p{
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#deals{
+    padding: 5%;
+    background-color: aliceblue;
+}
+
+#deals h1{
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.card-wrapper{
+    width: 70vw;
+    margin: auto;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.card{
+    margin: auto;
+    width: 80%;
+    border-radius: 20px;
+    border: 2px solid var(--primary);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+
+.card-header{
+    height: 35px;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px 15px 0px 0px;
+    background-color: var(--primary-light);
+}
+
+.card-header p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+.card-body img{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.25);
+}
+
+.card-info{
+    color: var(--orange);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    height: 80px;
+}
+
+.card-footer{
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    padding: 10px;
+    border-top: 2px solid var(--primary-light);
+}
+
+.card-footer button{
+    position: relative;
+}
+
+.card-footer p{
+    
+}

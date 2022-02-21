@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 :root{
     --primary: rgb(26,38,89);
@@ -66,6 +68,12 @@ header nav li:hover{
     border-bottom: 2px solid aliceblue;
 }
 
+header nav li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-family: 'Rubik', sans-serif;
+}
+
 header button{
     border: 1px solid white;
     background: none;
@@ -99,8 +107,15 @@ header button:hover{
     -o-transform: rotate(-15deg);
     -webkit-transform: rotate(-15deg);
     transform: rotate(-15deg);
+    transition: 0.5s;
 }
 
+#cover img:hover{
+    -moz-transform: rotate(15deg);
+    -o-transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+    transform: rotate(12deg);
+}
 #cover div p{
     font-size: 70px;
     font-weight: bold;
@@ -118,6 +133,7 @@ header button:hover{
     margin-bottom: 50px;
     text-align: center;
     font-size: 35px;
+    color: var(--primary-light);
 }
 
 .card-wrapper{
@@ -126,14 +142,24 @@ header button:hover{
     display: grid;
     grid-gap: 30px;
     grid-template-columns: repeat(3,1fr);
+    background-color: rgb(211, 233, 255);
+    padding: 5%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px rgba(0,0,0,0.15);
 }
 
 .card{
     margin: auto;
     width: 80%;
-    border-radius: 20px;
+    height: 410px;
+    border-radius: 10px;
     border: 2px solid var(--primary);
     box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    transition: 0.1s all ease-in-out;
+}
+
+.card:hover{
+    width: 85%;
 }
 
 .card-header{
@@ -142,7 +168,7 @@ header button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
     background-color: var(--primary-light);
 }
 
@@ -170,17 +196,74 @@ header button:hover{
 }
 
 .card-footer{
-    display: flex;
     overflow: hidden;
     align-items: center;
     padding: 10px;
     border-top: 2px solid var(--primary-light);
 }
 
-.card-footer button{
-    position: relative;
+.card-footer p{
+    float: left;
+    line-height: 50px;
+    font-size: 25px;
+    padding: 0px 10px;
+    color: var(--primary-light);
+    font-family: 'Dancing Script', cursive;
+    transition: 0.1s ease-in-out;
 }
 
-.card-footer p{
-    
+.card:hover .card-footer p{
+    font-size: 35px;
+}
+
+.card-footer button{
+    float: right;
+    margin-top: 9px;
+    border: none;
+    background-color: var(--orange);
+    border-radius: 500px;
+    padding: 7px;
+    cursor: pointer;
+}
+
+#trips{
+    background-color: var(--primary-light);
+    padding: 5%;
+}
+
+.trips_content{
+    display: grid;
+    grid-template-columns: repeat(2,40%);
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    margin: auto;
+    background-color: var(--primary);
+    box-shadow: 0px 0px 50px rgba(0,0,0,0.15);
+    border-radius: 20px;
+    padding: 3%;
+}
+
+.trips_content div:nth-child(1){
+    color: aliceblue;
+    font-family: 'Rubik', sans-serif;
+    border-right: 1px solid #444;
+}
+
+.trips_content div:nth-child(1) h3{
+    font-size: 50px;
+    line-height: 80px;
+}
+
+.trips_content div:nth-child(1) p{
+    font-size: 20px;
+    line-height: 60px;
+}
+
+.trips_content div:nth-child(1) button{
+    border: none;
+    background-color: var(--orange);
+    padding: 7px 20px;
+    border-radius: 5px;
+    font-weight: bold;
 }
